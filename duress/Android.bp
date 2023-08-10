@@ -1,0 +1,28 @@
+
+cc_binary {
+    name: "vendor.duress_service",
+    proprietary: true,
+    srcs: [
+        "duress_service.cpp",
+    ],
+    cpp_std: "c++2a",
+    cflags: [
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-pedantic",
+            "-Wno-unused-parameter",
+            "-Wthread-safety",
+    ],
+    init_rc: ["duress_service.rc"],
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libutils",
+        "libcutils"
+    ],
+    static_libs: [
+        "libnos_for_duress",
+        "libnos_citadel_for_duress",
+    ],
+}

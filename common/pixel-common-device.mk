@@ -6,7 +6,8 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/common/system
 
 # Write flags to the vendor space in /misc partition.
 PRODUCT_PACKAGES += \
-    misc_writer
+    misc_writer \
+    vendor.duress_service \
 
 # Enable atrace hal and tools for pixel devices
 PRODUCT_PACKAGES += \
