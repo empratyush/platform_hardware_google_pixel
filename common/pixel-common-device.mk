@@ -1,3 +1,4 @@
+PRODUCT_PACKAGES += vendorDuressService
 PRODUCT_COPY_FILES += \
       hardware/google/pixel/common/init.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel.rc
 

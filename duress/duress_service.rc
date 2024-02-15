@@ -1,0 +1,13 @@
+# vendor.citadeld needs to stopped before starting duress_wipe
+# otherwise comminution to Titan M will fail with error
+# `device or resource busy`
+
+on property:sys.duress.wipe.start=vendor
+   stop vendor.citadeld
+   start vendorDuressService
+
+service vendorDuressService /vendor/bin/vendorDuressService
+    user hsm
+    group hsm
+    oneshot
+    disabled
